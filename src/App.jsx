@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Navbar } from "flowbite-react";
+import Pdf from './assets/resume/Resume.pdf';
 
 // import pages
 // TODO:remove import ExperiencePage from "./pages/ExperiencePage";
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+      {/* Top Navbar */}
       <Navbar fluid={true} rounded={true}>
         <a href="#Home" className="no-underline text-black">
           <Navbar.Brand>
@@ -43,9 +45,15 @@ function App() {
           <button onClick={() => {handleScroll(ContactMeRef);}}>
             <Navbar.Link>Contact Me</Navbar.Link>
           </button>
+          <button>
+            <a href = {Pdf} target = "_blank">
+              <Navbar.Link>Resume</Navbar.Link>
+            </a>
+          </button>
         </Navbar.Collapse>
       </Navbar>
 
+      {/* Main Page Content */}
       <div className="font-Poppins">
         <div ref={HeroRef}>
           <Hero />
