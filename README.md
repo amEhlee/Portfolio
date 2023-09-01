@@ -9,3 +9,7 @@
 </p>
 
 ![image](https://user-images.githubusercontent.com/76502588/208776492-244b8c3d-fdc8-42c1-92d7-a0a0bc0020d3.png)
+
+<p>
+  Hosting Vite Static Sites: https://youtu.be/XhoWXhyuW_I?si=Hvk84wHE0Ig4Wfmb
+</p>

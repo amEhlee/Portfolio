@@ -12,10 +12,10 @@ export default function Hero() {
             <h2 className="text-slate-400">Full-Stack Developer</h2>
           </div>
           <p className="max-w-md-w-3lg text-slate-500 font-light">
-            I'm a junior developer who specializes in building
+            I'm a Full Stack Developer developer who specializes in building
             exceptional,resposive and especially inclusive digital experiences.
-            I am currently working as a Frontend Developer for{" "}
-            <p className="font-bold inline-block">New Idea Machine</p> and
+            I am currently working as a Full Stack Developer for{" "}
+            <a href="https://newideamachine.com" target="_blank" className="font-bold inline-block">New Idea Machine</a> and
             seeking further work as a fullstack developer.
           </p>
         </div>

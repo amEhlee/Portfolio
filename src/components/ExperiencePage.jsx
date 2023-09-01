@@ -37,7 +37,7 @@ export default function ExperiencePage() {
           description="My portfolio page made to accompany my resume. Built using React and Tailwind CSS for styling."
           linktype="Github"
           gradientColor="purpleToBlue"
-          githubLink="https://github.com/amEhlee/amehlee-portfolio"
+          githubLink="https://github.com/amEhlee/Portfolio"
         />
         <ProjectCard
           imageSource={PortfolioImage}

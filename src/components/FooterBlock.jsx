@@ -8,7 +8,7 @@ export default function FooterBlock() {
       </div>
       <div className="font-medium text-slate-600">
         <a href="https://github.com/amEhlee/amehlee-portfolio">
-          <p>Junior Full-Stack Developer</p>⭐ Github ⭐
+          <p>Full-Stack Developer</p>⭐ Github ⭐
         </a>
       </div>
     </footer>

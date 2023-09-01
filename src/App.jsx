@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Navbar } from "flowbite-react";
-import Pdf from './assets/resume/Resume.pdf';
+import Pdf from "./assets/resume/Resume.pdf";
 
 // import pages
 // TODO:remove import ExperiencePage from "./pages/ExperiencePage";
@@ -20,41 +20,50 @@ function App() {
     givenRef.current?.scrollIntoView({ behavior: "smooth" });
   }
 
+  function NavScrollButton({ givenRef, name }) {
+    return (
+      <button
+        onClick={() => {
+          handleScroll(givenRef);
+        }}
+      >
+        <p className="hover:text-primaryLightBlue duration-300">{name}</p>
+      </button>
+    );
+  }
+
   return (
     <>
-      {/* Top Navbar */}
-      <Navbar fluid={true} rounded={true}>
-        <a href="#Home" className="no-underline text-black">
-          <Navbar.Brand>
-            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white text-black">
+      <nav className="text-slate-200 fixed top-0 w-full z-10 backdrop-blur-3xl bg-primaryNavDarkBlue shadow-2xl ">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <button
+            onClick={() => {
+              handleScroll(HeroRef);
+            }}
+          >
+            <p className="self-center text-2xl font-semibold whitespace-nowrap select-non duration-300">
               Elie Kabengele
-            </span>
-          </Navbar.Brand>
-        </a>
-        <Navbar.Toggle />
-        <Navbar.Collapse>
-          <button onClick={() => {handleScroll(HeroRef);}}>
-            <Navbar.Link>Home</Navbar.Link>
+            </p>
           </button>
-          <button onClick={() => {handleScroll(AboutRef);}}>
-            <Navbar.Link>About</Navbar.Link>
-          </button>
-          <button onClick={() => {handleScroll(ProjectsRef);}}>
-            <Navbar.Link>Projects</Navbar.Link>
-          </button>
-          <button onClick={() => {handleScroll(ContactMeRef);}}>
-            <Navbar.Link>Contact Me</Navbar.Link>
-          </button>
-          <button>
-            <a href = {Pdf} target = "_blank">
-              <Navbar.Link>Resume</Navbar.Link>
-            </a>
-          </button>
-        </Navbar.Collapse>
-      </Navbar>
+
+          <div className="hidden w-full md:block md:w-auto text-slate-200">
+            <div className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 md:border-0">
+              <NavScrollButton givenRef={HeroRef} name="Home" />
+              <NavScrollButton givenRef={AboutRef} name="About" />
+              <NavScrollButton givenRef={ProjectsRef} name="Projects" />
+              <NavScrollButton givenRef={ContactMeRef} name="Contact Me" />
+              <button>
+                <a href={Pdf} target="_blank">
+                  <p>Resume</p>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
 
       {/* Main Page Content */}
-      <div className="font-Poppins">
+      <div className="font-Poppins pt-16">
         <div ref={HeroRef}>
           <Hero />
         </div>

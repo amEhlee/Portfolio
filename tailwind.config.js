@@ -17,6 +17,7 @@ module.exports = {
         primaryWhite: "#FFFFFF",
         primaryOffWhite: "#F0F0F0",
         primaryBlack: "#000000",
+        primaryNavDarkBlue: "#0f172ad5"
       },
       screens: {
         'sm': '320px',
