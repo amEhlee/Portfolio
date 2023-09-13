@@ -7,7 +7,7 @@ export default function FooterBlock() {
         <h3 className="font-bold text-slate-300">Elie Kabengele</h3>
       </div>
       <div className="font-medium text-slate-600">
-        <a href="https://github.com/amEhlee/amehlee-portfolio">
+        <a href="https://github.com/amEhlee/Portfolio">
           <p>Full-Stack Developer</p>⭐ Github ⭐
         </a>
       </div>
