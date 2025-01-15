@@ -7,11 +7,17 @@ import CapstonePeralta from "../assets/images/CapstonePeralta.jpg";
 import UnityPlatformer from "../assets/images/UnityPlatformer.jpg";
 import PostalCodeLookup from "../assets/images/PostalCodeLookup.png";
 import UniversityLookup from "../assets/images/UniversityLookup.png";
+import LearningBuddy from "../assets/images/LearningBuddy.png";
+import TcgMachines from "../assets/images/CardSorter.png";
 
 export function ProjectCard(props) {
   return (
     <div className="px-20 py-10">
-      <Card imgAlt={props.imageAlt} imgSrc={props.imageSource}>
+      <Card
+        imgAlt={props.imageAlt}
+        imgSrc={props.imageSource}
+        className="h-[480px]"
+      >
         <div className="flex flex-col items-center justify-center">
           <h5 className="text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">
             {props.title}
@@ -49,6 +55,24 @@ export default function ProjectsPage() {
           slide={false}
           className="min-w-[400px] sm:min-w-[400px] md:min-w-[550px]"
         >
+          <ProjectCard
+            imageSource={TcgMachines}
+            imageAlt="TCG Machines Card Sorting Web App"
+            title="TCG Machines Card Sorting "
+            description="TCG Machines was a previous company I worked for where I assisted in the development and maintenenace of their card sorting web app"
+            linktype="Company Site"
+            gradientColor="pinkToOrange"
+            githubLink="https://tcgmachines.com/"
+          />
+          <ProjectCard
+            imageSource={LearningBuddy}
+            imageAlt="Learning Buddy Image"
+            title="Learning Buddy"
+            description="Blog post detailing how to build a platformer in C# using Unity. The player will be able to run, jump and interact with the world"
+            linktype="Notion Blog"
+            gradientColor="pinkToOrange"
+            githubLink="#"
+          />
           <ProjectCard
             imageSource={CapstonePeralta}
             imageAlt="Capstone Peralta Image"
